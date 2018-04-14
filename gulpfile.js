@@ -10,6 +10,7 @@ var gulp 				 = require('gulp'),
 		pngquant		 = require('imagemin-pngquant'),
 		cache				 = require('gulp-cache'),
 		autoprefixer = require('gulp-autoprefixer'),
+		babel 			 = require('gulp-babel'),
 		plumber 		 = require('gulp-plumber');
 
 
@@ -85,6 +86,9 @@ gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
 	.pipe(gulp.dest('dist/fonts'));
 
 	var buildJs = gulp.src('app/js/**/*')
+	.pipe(babel({
+    presets: ['env']
+   }))
 	.pipe(gulp.dest('dist/js'));
 
 	var buildHtml = gulp.src('app/*.html')

@@ -393,3 +393,229 @@ template {
 [hidden] {
   display: none;
 }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.item {
+  display: block;
+  position: absolute;
+}
+.item__apple {
+  background-image: url("../img/items/apple.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 19px;
+  height: 20px;
+  top: 132px;
+  left: 289px;
+}
+.item__balerina {
+  background-image: url("../img/items/balerina.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 29px;
+  height: 48px;
+  top: 109px;
+  left: 254px;
+}
+.item__basket {
+  background-image: url("../img/items/basket.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 31px;
+  height: 33px;
+  top: 123px;
+  left: 236px;
+}
+.item__book {
+  background-image: url("../img/items/book.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 33px;
+  height: 20px;
+  top: 161px;
+  left: 314px;
+}
+.item__comb {
+  background-image: url("../img/items/comb.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 22px;
+  height: 19px;
+  top: 124px;
+  left: 412px;
+  -webkit-transform: rotate(28deg);
+      -ms-transform: rotate(28deg);
+          transform: rotate(28deg);
+}
+.item__fan {
+  background-image: url("../img/items/fan.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 34px;
+  height: 19px;
+  top: 137px;
+  -webkit-transform: rotate(-136deg);
+      -ms-transform: rotate(-136deg);
+          transform: rotate(-136deg);
+  left: 154px;
+}
+.item__glass_bird {
+  background-image: url("../img/items/glass_bird.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 34px;
+  height: 32px;
+  top: 57px;
+  left: 119px;
+}
+.item__mirror {
+  background-image: url("../img/items/mirror.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 25px;
+  height: 38px;
+  top: 97px;
+  left: 82px;
+}
+.item__parfume {
+  background-image: url("../img/items/parfume.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 22px;
+  height: 28px;
+  top: 164px;
+  left: 145px;
+}
+.item__playing_card {
+  background-image: url("../img/items/playing_card.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 22px;
+  height: 35px;
+  top: 138px;
+  left: 388px;
+  -webkit-transform: rotate(-44.5deg);
+      -ms-transform: rotate(-44.5deg);
+          transform: rotate(-44.5deg);
+}
+.item__purse {
+  background-image: url("../img/items/purse.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 28px;
+  height: 30px;
+  top: 159px;
+  left: 125px;
+}
+.item__shoe {
+  background-image: url("../img/items/shoe.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 37px;
+  height: 25px;
+  top: 206px;
+  left: 250px;
+}
+.wrapper {
+  width: 480px;
+  height: 270px;
+  background: url("../img/bg_ho.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: relative;
+  padding-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.task {
+  width: 152px;
+  height: 64px;
+  background-image: url("../img/Tutorial1.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding: 22px 20px 0px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+.task span {
+  display: block;
+  color: #460000;
+  font-size: 11.29px;
+  line-height: 14.55px;
+  text-transform: uppercase;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+.panel {
+  background-image: url('../img/ho_gui.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 322px;
+  height: 48px;
+  padding: 25px 30px 0px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.panel span {
+  font-size: 10px;
+  color: #460000;
+}
+.bg-cover {
+  background-image: url("../img/bg_cover.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
