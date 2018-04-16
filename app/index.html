@@ -4,10 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/main.js"></script>
 </head>
 <body>
+	<div id="preloader" class="preloader">
+		<div class="loading"><span>Loading...</span></div>
+	</div>
 	<div class="wrapper">
 		<div class="task">
 			<span>Find all the hidden objects</span>
@@ -25,9 +30,14 @@
 			<li data-name="Basket" class="item item__basket"></li>
 			<li data-name="Fan" class="item item__fan"></li>
 			<li data-name="Shoe" class="item item__shoe"></li>
-			<li id="panel" class="panel">
 		</ul>
+		<div id="panel" class="panel"></div>
 		<div class="bg-cover"></div>
+		<div id="end" class="end">
+			<div class="logo"></div>
+			<a href="#" class="button">Play free</a>
+			<a href="#" class="google"></a>
+		</div>
 	</div>
 </body>
 </html>

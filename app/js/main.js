@@ -1,4 +1,11 @@
 window.onload = function() {
+	var preload = setTimeout(function() {
+		var preloader = document.getElementById('preloader');
+		if (!preloader.classList.contains('preloader__ready')) {
+			preloader.classList.add('preloader__ready');
+		}
+	}, 1000);
+
 	const items = document.querySelectorAll('.item');
 	const fourRandomItems = Array.from(items).sort(() => Math.random() > 0.5 ?  -1 : 1).slice(0,4);
 	const panel = document.getElementById('panel');
@@ -9,6 +16,10 @@ window.onload = function() {
 		span.innerHTML = i.dataset.name;
 		panel.append(span);
 	}
+	let panelList = Array.from(panel.querySelectorAll('span'));
+	let panelNamelist = panelList.map((i) => i.innerHTML);
+
+	var illumination = setTimeout(illuminateFirst, 5000);
 
 	itemList.addEventListener('click', (event) => {
 		let targ = event.target
@@ -17,18 +28,23 @@ window.onload = function() {
 		
 		let position = fourRandomItems.indexOf(targ);
 		if (position === -1) return;
-		targ.remove();
+		targ.classList.add('dissapear');
+		setTimeout(() => targ.remove(), 990);
 		fourRandomItems.splice(position, 1);
 
-		let panelList = Array.from(panel.querySelectorAll('span'));
-		let panelNamelist = panelList.map((i) => i.innerHTML);
-		panelList[panelNamelist.indexOf(targName)].style.textDecoration = 'line-through';
+		panelList[panelNamelist.indexOf(targName)].classList.add('crossed-out');
+		clearTimeout(illumination);
+		illumination = setTimeout(illuminateFirst, 5000);
 
+		let end = document.getElementById('end');
 		if (fourRandomItems.length === 0) {
-			setTimeout(() => alert('end of the game'), 1000);
+			setTimeout(() => end.classList.add('end__showed'), 1000);
 		};
 	});
 
+	function illuminateFirst() {
+		if (fourRandomItems.length > 0) {
+			fourRandomItems[0].classList.add('illumination');
+		}
+	}
 }
-
-// Далее добавляем анимации, подсветку, задержка перед появлением окончания игры, меняем бэкграунд на блур1

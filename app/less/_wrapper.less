@@ -1,7 +1,13 @@
-
-.wrapper {
+body {
 	width: 480px;
 	height: 270px;
+	position: relative;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
 	background: url("../img/bg_ho.png");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -24,6 +30,7 @@
 	margin: auto;
 
 	span {
+		font-family: 'Arbutus Slab', serif;
 		display: block;
 		color: #460000;
 		font-size: 11.29px;
@@ -50,8 +57,23 @@
 	justify-content: space-around;
 
 	span {
+		font-family: 'Berkshire Swash', cursive;
 		font-size: 10px;
 		color: #460000;
+		position: relative;
+	}
+}
+
+.crossed-out {
+	&::before {
+		display: block;
+		position: absolute;
+		top: 24%;
+		left: -10%;
+		content: '';
+		width: 120%;
+		height: 2px;
+		background: #460000;
 	}
 }
 

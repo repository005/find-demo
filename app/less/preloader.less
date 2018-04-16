@@ -1,0 +1,42 @@
+.preloader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000;
+	background-image: url("../img/bg_preloader.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 8px;
+	box-sizing: border-box;
+	z-index: 10;
+	visibility: visible;
+	opacity: 1;
+	transition: all 1s ease;
+
+	&__ready {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.loading {
+	z-index: 15;
+	width: 152px;
+	height: 64px;
+	background-image: url("../img/Tutorial1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 29px 20px 0px 20px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: auto;
+
+	span {
+		font-family: 'Arbutus Slab', serif;
+		display: block;
+		color: #460000;
+		font-size: 14px;
+		line-height: 14.55px;
+		text-transform: uppercase;
+	}
+}

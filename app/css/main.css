@@ -421,6 +421,186 @@ template {
             transform: scale(1);
   }
 }
+@-webkit-keyframes illumination {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  50% {
+    -webkit-filter: brightness(1.3);
+            filter: brightness(1.3);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+@keyframes illumination {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  50% {
+    -webkit-filter: brightness(1.3);
+            filter: brightness(1.3);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+.illumination {
+  -webkit-animation: 1.5s infinite ease illumination;
+          animation: 1.5s infinite ease illumination;
+}
+@-webkit-keyframes dissapear {
+  0% {
+    opacity: 1;
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  40% {
+    z-index: 20;
+  }
+  100% {
+    opacity: 0;
+    -webkit-filter: brightness(3) blur(15px) drop-shadow(0px 0px 20px white);
+            filter: brightness(3) blur(15px) drop-shadow(0px 0px 20px white);
+  }
+}
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  40% {
+    z-index: 20;
+  }
+  100% {
+    opacity: 0;
+    -webkit-filter: brightness(3) blur(15px) drop-shadow(0px 0px 20px white);
+            filter: brightness(3) blur(15px) drop-shadow(0px 0px 20px white);
+  }
+}
+.dissapear {
+  -webkit-animation: 1000ms ease dissapear;
+          animation: 1000ms ease dissapear;
+}
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  background-image: url("../img/bg_preloader.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 10;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.preloader__ready {
+  visibility: hidden;
+  opacity: 0;
+}
+.loading {
+  z-index: 15;
+  width: 152px;
+  height: 64px;
+  background-image: url("../img/Tutorial1.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding: 29px 20px 0px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+.loading span {
+  font-family: 'Arbutus Slab', serif;
+  display: block;
+  color: #460000;
+  font-size: 14px;
+  line-height: 14.55px;
+  text-transform: uppercase;
+}
+.end {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg_blur.png") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  -webkit-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  transition: 1s all ease;
+}
+.end__showed {
+  visibility: visible;
+  opacity: 1;
+}
+.logo {
+  position: absolute;
+  width: 263px;
+  height: 129px;
+  background: url("../img/logo.png") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 31px;
+}
+.button {
+  display: block;
+  position: absolute;
+  width: 138px;
+  height: 35px;
+  background: url("../img/button.png") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 161px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0d2900;
+  font-family: 'Arbutus Slab', serif;
+  font-size: 14px;
+  text-align: center;
+  -webkit-animation: 1.5s infinite ease illumination;
+          animation: 1.5s infinite ease illumination;
+}
+.google {
+  display: block;
+  position: absolute;
+  width: 56.4px;
+  height: 16.8px;
+  background: url("../img/google.png") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 215px;
+}
 .item {
   display: block;
   position: absolute;
@@ -538,9 +718,15 @@ template {
   -webkit-filter: brightness(0.8) saturate(0.9);
           filter: brightness(0.8) saturate(0.9);
 }
-.wrapper {
+body {
   width: 480px;
   height: 270px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
   background: url("../img/bg_ho.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -569,6 +755,7 @@ template {
   margin: auto;
 }
 .task span {
+  font-family: 'Arbutus Slab', serif;
   display: block;
   color: #460000;
   font-size: 11.29px;
@@ -601,8 +788,20 @@ template {
           justify-content: space-around;
 }
 .panel span {
+  font-family: 'Berkshire Swash', cursive;
   font-size: 10px;
   color: #460000;
+  position: relative;
+}
+.crossed-out::before {
+  display: block;
+  position: absolute;
+  top: 24%;
+  left: -10%;
+  content: '';
+  width: 120%;
+  height: 2px;
+  background: #460000;
 }
 .bg-cover {
   background-image: url("../img/bg_cover.png");

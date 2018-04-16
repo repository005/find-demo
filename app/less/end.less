@@ -1,0 +1,67 @@
+.end {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../img/bg_blur.png") no-repeat;
+	background-size: cover;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	transition: 1s all ease;
+
+	&__showed {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.logo {
+	position: absolute;
+	width: 263px;
+	height: 129px;
+	background: url("../img/logo.png") no-repeat;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 31px;
+}
+
+.button {
+	display: block;
+	position: absolute;
+	width: 138px;
+	height: 35px;
+	background: url("../img/button.png") no-repeat;
+	background-size: cover;
+	padding-top: 8px;
+	box-sizing: border-box;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 161px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #0d2900;
+	font-family: 'Arbutus Slab', serif;
+	font-size: 14px;
+	text-align: center;
+	.illumination;
+}
+
+.google {
+	display: block;
+	position: absolute;
+	width: 56.4px;
+	height: 16.8px;
+	background: url("../img/google.png") no-repeat;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 215px;
+}
+
+//Сделать анимацию убирающегося предмета
