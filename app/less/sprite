@@ -1,0 +1,77 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-apple {
+    width: 100px;
+    height: 105px;
+    background-position: -5px -5px;
+}
+
+.sprite-balerina {
+    width: 100px;
+    height: 164px;
+    background-position: -115px -5px;
+}
+
+.sprite-basket {
+    width: 100px;
+    height: 109px;
+    background-position: -225px -5px;
+}
+
+.sprite-book {
+    width: 100px;
+    height: 60px;
+    background-position: -335px -5px;
+}
+
+.sprite-comb {
+    width: 100px;
+    height: 99px;
+    background-position: -445px -5px;
+}
+
+.sprite-fan {
+    width: 100px;
+    height: 55px;
+    background-position: -555px -5px;
+}
+
+.sprite-glass_bird {
+    width: 100px;
+    height: 92px;
+    background-position: -665px -5px;
+}
+
+.sprite-mirror {
+    width: 100px;
+    height: 151px;
+    background-position: -775px -5px;
+}
+
+.sprite-parfume {
+    width: 100px;
+    height: 126px;
+    background-position: -885px -5px;
+}
+
+.sprite-playing_card {
+    width: 100px;
+    height: 162px;
+    background-position: -995px -5px;
+}
+
+.sprite-purse {
+    width: 100px;
+    height: 109px;
+    background-position: -1105px -5px;
+}
+
+.sprite-shoe {
+    width: 100px;
+    height: 69px;
+    background-position: -1215px -5px;
+}

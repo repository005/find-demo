@@ -1,30 +1,36 @@
 body {
-	width: 480px;
-	height: 270px;
+	background: rgba(15,0,10, 1);
 	position: relative;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	width: 100vw;
+	height: 100vh;
 }
 
 .wrapper {
-	width: 100%;
-	height: 100%;
 	background: url("../img/bg_ho.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
-	padding-top: 8px;
+	position: absolute;
+	width: 960px;
+	height: 640px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding-top: 16px;
 	box-sizing: border-box;
 	user-select: none;
 	cursor: pointer;
 }
 
 .task {
-	width: 152px;
-	height: 64px;
+	width: 304px;
+	height: 128px;
 	background-image: url("../img/Tutorial1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 22px 20px 0px 20px;
+	padding: 42px 40px 0px 40px;
 	box-sizing: border-box;
 	text-align: center;
 	margin: auto;
@@ -33,8 +39,8 @@ body {
 		font-family: 'Arbutus Slab', serif;
 		display: block;
 		color: #460000;
-		font-size: 11.29px;
-		line-height: 14.55px;
+		font-size: 22px;
+		line-height: 30px;
 		text-transform: uppercase;
 		animation: pulse 2s infinite;
 	}
@@ -49,16 +55,16 @@ body {
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 322px;
-	height: 48px;
-	padding: 25px 30px 0px 30px;
+	width: 644px;
+	height: 96px;
+	padding: 46px 60px 0px 60px;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-around;
 
 	span {
 		font-family: 'Berkshire Swash', cursive;
-		font-size: 10px;
+		font-size: 24px;
 		color: #460000;
 		position: relative;
 	}
@@ -68,11 +74,11 @@ body {
 	&::before {
 		display: block;
 		position: absolute;
-		top: 24%;
-		left: -10%;
+		top: 25%;
+		left: -5%;
 		content: '';
-		width: 120%;
-		height: 2px;
+		width: 110%;
+		height: 4px;
 		background: #460000;
 	}
 }

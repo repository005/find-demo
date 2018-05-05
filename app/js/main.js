@@ -1,10 +1,8 @@
 window.onload = function() {
-	var preload = setTimeout(function() {
-		var preloader = document.getElementById('preloader');
+		const preloader = document.getElementById('preloader');
 		if (!preloader.classList.contains('preloader__ready')) {
 			preloader.classList.add('preloader__ready');
 		}
-	}, 1000);
 
 	const items = document.querySelectorAll('.item');
 	const fourRandomItems = Array.from(items).sort(() => Math.random() > 0.5 ?  -1 : 1).slice(0,4);
@@ -16,27 +14,27 @@ window.onload = function() {
 		span.innerHTML = i.dataset.name;
 		panel.append(span);
 	}
-	let panelList = Array.from(panel.querySelectorAll('span'));
-	let panelNamelist = panelList.map((i) => i.innerHTML);
+	const panelList = Array.from(panel.querySelectorAll('span'));
+	const panelNamelist = panelList.map((i) => i.innerHTML);
 
-	var illumination = setTimeout(illuminateFirst, 5000);
+	let illumination = setTimeout(illuminateFirst, 30000);
 
-	itemList.addEventListener('click', (event) => {
-		let targ = event.target
-		let targName = targ.dataset.name;
+	itemList.addEventListener('click', (e) => {
+		const targ = event.target
+		const targName = targ.dataset.name;
 		if (targ.tagName != 'LI') return;
 		
-		let position = fourRandomItems.indexOf(targ);
+		const position = fourRandomItems.indexOf(targ);
 		if (position === -1) return;
 		targ.classList.add('dissapear');
-		setTimeout(() => targ.remove(), 990);
+		setTimeout(() => targ.remove(), 900);
 		fourRandomItems.splice(position, 1);
 
 		panelList[panelNamelist.indexOf(targName)].classList.add('crossed-out');
 		clearTimeout(illumination);
-		illumination = setTimeout(illuminateFirst, 5000);
+		illumination = setTimeout(illuminateFirst, 30000);
 
-		let end = document.getElementById('end');
+		const end = document.getElementById('end');
 		if (fourRandomItems.length === 0) {
 			setTimeout(() => end.classList.add('end__showed'), 1000);
 		};

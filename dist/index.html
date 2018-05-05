@@ -4,10 +4,40 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
-	
-	<script src="js/main.js"></script>
+	<div id="preloader" class="preloader">
+		<div class="loading"><span>Loading...</span></div>
+	</div>
+	<div class="wrapper">
+		<div class="task">
+			<span>Find all the hidden objects</span>
+		</div>
+		<ul id="item-list" class="item-list">
+			<li data-name="Mirror" class="item item__mirror"></li>
+			<li data-name="Ballet Dancer" class="item item__balerina"></li>
+			<li data-name="Perfume" class="item item__parfume"></li>
+			<li data-name="Comb" class="item item__comb"></li>
+			<li data-name="Playing Card" class="item item__playing_card"></li>
+			<li data-name="Purse" class="item item__purse"></li>
+			<li data-name="Glass Bird" class="item item__glass_bird"></li>
+			<li data-name="Apple" class="item item__apple"></li>
+			<li data-name="Book" class="item item__book"></li>
+			<li data-name="Basket" class="item item__basket"></li>
+			<li data-name="Fan" class="item item__fan"></li>
+			<li data-name="Shoe" class="item item__shoe"></li>
+		</ul>
+		<div id="panel" class="panel"></div>
+		<div class="bg-cover"></div>
+		<div id="end" class="end">
+			<div class="logo"></div>
+			<a href="#" class="button">Play free</a>
+			<a href="#" class="google"></a>
+		</div>
+	</div>
 </body>
 </html>
